@@ -10,5 +10,6 @@
 		<Button text="Hello World2"></Button>
 			<Button text="Hello World3"></Button>
 	<Button text="Hello World4"></Button>
+	<Button text="Hello World5"></Button>
 	</App>
 </mvc:View>
