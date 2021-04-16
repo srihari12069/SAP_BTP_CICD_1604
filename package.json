@@ -1,0 +1,36 @@
+{
+  "name": "html5module",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@sap/ui5-builder-webide-extension": "^1.1.0",
+    "@sapui5/ts-types": "1.71.x",
+    "@ui5/cli": "^2.6.2",
+    "bestzip": "2.1.4",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-qunit": "^4.1.1",
+    "karma-sinon": "^1.0.5",
+    "karma-ui5": "^2.3.1",
+    "puppeteer": "^5.4.1",
+    "qunit": "^2.11.3",
+    "rimraf": "3.0.2",
+    "sinon": "^9.2.1"
+  },
+  "scripts": {
+    "build": "ui5 build --include-task=generateManifestBundle generateCachebusterInfo",
+    "zip": "npx bestzip ./HTML5Module-content.zip *",
+    "clean": "npx rimraf HTML5Module-content.zip dist",
+    "test": "karma start",
+    "fullbuild":"karma start && npm run clean && ui5 build --include-task=generateManifestBundle generateCachebusterInfo"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ui5-builder-webide-extension"
+    ]
+  },
+  "dependencies": {
+    "headless-chromium": "0.0.1-prerelease.1",
+    "quint": "^1.2.0"
+  }
+}

@@ -1,0 +1,81 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.yash.EmpCrudApp.controller.updateEmp"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page id="updateEmp" title="Update Employee" showNavButton="true" navButtonPress="backToHome">
+				<content>
+					<Bar id="bar2" class="bar2_class" visible="false">
+						<contentLeft>
+							<Title text="{LocalDataModel>/titles/createPhysicalLineItems}" level="H2"/>
+						</contentLeft>
+						<contentMiddle></contentMiddle>
+						<contentRight>
+							<Button id="btnUpdateData" text="Update" type="Emphasized" press="onUpdateItems"></Button>
+							<Button id="btnCancelUpdate" text="Cancel" type="Reject" press="onCancelUpdate"></Button>
+						</contentRight>
+					</Bar>
+					<Table id="idProductsTable" inset="false" items="{LocalDataModel>/createEmployeeData}" visible="false">
+						<columns>
+							<Column >
+								<Text text="Employee Id"/>
+							</Column>
+							<Column >
+								<Text text="Employee Name"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="Gender"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+								<Text text="Age"/>
+							</Column>
+							<Column hAlign="End">
+								<Text text="Designation"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{LocalDataModel>Employeeid}"/>
+									<Input value="{LocalDataModel>Employeename}"></Input>
+									<Input value="{LocalDataModel>Gender}"></Input>
+									<Input value="{LocalDataModel>Age}"></Input>
+									<Input value="{LocalDataModel>Designation}"></Input>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Table id="idsecondTable" inset="false" items="{LocalDataModel>/employyeData}" class="sapUiLargeMarginTop" visible="true">
+						<columns>
+							<Column >
+								<Text text="Employee Id"/>
+							</Column>
+							<Column >
+								<Text text="Employee Name"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+								<Text text="Gender"/>
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+								<Text text="Age"/>
+							</Column>
+							<Column hAlign="End">
+								<Text text="Designation"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem press="onSelectItem" type="Active" id="idColumnListItem">
+								<cells>
+									<Text text="{LocalDataModel>Employeeid}"/>
+									<Text text="{LocalDataModel>Employeename}"></Text>
+									<Text text="{LocalDataModel>Gender}"></Text>
+									<Text text="{LocalDataModel>Age}"></Text>
+									<Text text="{LocalDataModel>Designation}"></Text>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
