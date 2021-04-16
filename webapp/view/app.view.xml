@@ -6,5 +6,6 @@
 	<App 
 		id="app">
 		<Button text="Hello World"></Button>
+		<Button text="Hello World1"></Button>
 	</App>
 </mvc:View>
