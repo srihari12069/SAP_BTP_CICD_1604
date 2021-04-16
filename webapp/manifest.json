@@ -12,15 +12,6 @@
 		"sourceTemplate": {
 			"id": "servicecatalog.connectivityComponentForManifest",
 			"version": "0.0.0"
-		},
-		"dataSources": {
-			"ZOD_EMP_CENTRAL_SRV": {
-				"uri": "/sap/opu/odata/sap/ZOD_EMP_CENTRAL_SRV/",
-				"type": "OData",
-				"settings": {
-					"localUri": "localService/metadata.xml"
-				}
-			}
 		}
 	},
 	"sap.ui": {
